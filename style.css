@@ -1,0 +1,43 @@
+body{
+    font-family: monospace;
+    text-align: center;
+}
+.container{
+    margin: 50px auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    background: red;
+}
+.screen{
+    height: 50px;
+    border: 2px solid black;
+    margin: 10px;
+    background: white;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 344px;
+}
+table{
+    border: 2px solid black;
+    margin: 10px;
+    background: black;
+}
+td{
+    border: 1px solid black;
+    margin: 2px;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    background: red;
+    transition: 0.2s;
+}
+td:active{
+    box-shadow: 3px 3px 10px grey;
+    transform: translateY(1px);
+}
+p{
+    font-size: 28px;
+    text-align: right;
+    line-height: 20px;
+}
