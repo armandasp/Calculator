@@ -1,40 +1,54 @@
-const clearAll=document.querySelector('.ce')
-const clear=document.querySelector('.clear')
-const number=document.querySelectorAll('.number')
-const plusMinus=document.querySelector('.plus-minus')
-const sqrt=document.querySelector('.sqrt')
-var  num=document.querySelector('.number1')
-const percentages=document.querySelector('.percentages')
-const equal=document.querySelector('.equal')
-var result=document.querySelector('.screen p')
+const clearAll = document.querySelector(".ce");
+const clear = document.querySelector(".clear");
+const number = document.querySelectorAll(".number");
+const plusMinus = document.querySelector(".plus-minus");
+const sqrt = document.querySelector(".sqrt");
+var num = document.querySelector(".number1");
+const percentages = document.querySelector(".percentages");
+const equal = document.querySelector(".equal");
+var input = document.querySelector(".screen p");
 
-number.forEach(function(numb, x){
-    number[x].addEventListener('click',function () {
-        if(number[x]<=0){
-            result.textContent+=parseFloat(number[x].textContent)
-        }else{
-            result.textContent+=(number[x].textContent)
-        }
-        return parseFloat(result.textContent)
-    })
-})
+function sum(a, b) {
+  return a + b;
+}
 
-clearAll.addEventListener('click', function () {
-    result.textContent=''
-})
+number.forEach(function (numb, x) {
+  number[x].addEventListener("click", function () {
+    if (number[x] <= 0) {
+      input.textContent += parseFloat(number[x].textContent);
+    } else {
+      input.textContent += number[x].textContent;
+    }
+    return parseFloat(input.textContent);
+  });
+});
 
-clear.addEventListener('click', function () {
+clearAll.addEventListener("click", function () {
+  input.textContent = "";
+});
 
-})
+clear.addEventListener("click", function () {});
 
-sqrt.addEventListener('click', function () {
-    result.textContent=Math.sqrt(result.textContent)
-})
+sqrt.addEventListener("click", function () {
+  input.textContent = Math.sqrt(input.textContent);
+});
 
-equal.addEventListener('click', function () {
-    return parseFloat(result.textContent)
-})
+equal.addEventListener("click", function () {
+  let result = 0;
+  var inputValue = input.innerHTML;
+  var numbersValues = inputValue.split(/\+|\-|\*|\//g);
+  var numbers = numbersValues.map((a) => Number(a));
+  const operators = inputValue.replace(/[0-9]|\./g, "").split("");
+  // add
+  if (operators[0] == "+") {
+    result = numbers.reduce((a, b) => a + b);
+  } else if (operators[0] == "-") {
+    result = numbers.reduce((a, b) => a - b);
+  } else if (operators[0] == "*") {
+    result = numbers.reduce((a, b) => a * b);
+  } else if (operators[0] == "/") {
+    result = numbers.reduce((a, b) => a / b);
+  }
 
-
-
-
+  input.innerHTML = result;
+});
