@@ -1,5 +1,4 @@
 const clearAll = document.querySelector(".ce");
-const clear = document.querySelector(".clear");
 const number = document.querySelectorAll(".number");
 const plusMinus = document.querySelector(".plus-minus");
 const sqrt = document.querySelector(".sqrt");
@@ -26,8 +25,6 @@ number.forEach(function (numb, x) {
 clearAll.addEventListener("click", function () {
   input.textContent = "";
 });
-
-clear.addEventListener("click", function () {});
 
 sqrt.addEventListener("click", function () {
   input.textContent = Math.sqrt(input.textContent);

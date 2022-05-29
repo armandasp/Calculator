@@ -1,66 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Karolis" />
+    <meta name="keywords" content="html css webpage" />
+    <meta name="description" content="HTML Paskaita" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="author" content="Karolis">
-  <meta name="keywords" content="html css webpage">
-  <meta name="description" content="HTML Paskaita">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>calculator</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <div class="container">
+      <div class="screen">
+        <p></p>
+      </div>
+      <table>
+        <tr>
+          <td class="number">+</td>
+          <td class="number">-</td>
+          <td class="number">*</td>
+          <td class="number">/</td>
+        </tr>
 
-<body>
-  <div class="container">
-    <div class="screen">
-      <p></p>
+        <tr>
+          <td class="number">7</td>
+          <td class="number">8</td>
+          <td class="number">9</td>
+          <td class="sqrt">√</td>
+        </tr>
+
+        <tr>
+          <td class="number">4</td>
+          <td class="number">5</td>
+          <td class="number">6</td>
+          <td rowspan="3" class="equal">=</td>
+        </tr>
+
+        <tr>
+          <td class="number">1</td>
+          <td class="number">2</td>
+          <td class="number">3</td>
+        </tr>
+
+        <tr>
+          <td class="number">0</td>
+          <td class="number">.</td>
+          <td class="ce">C</td>
+          
+        </tr>
+      </table>
     </div>
-    <table>
-      <tr>
-        <td>MRC</td>
-        <td>M-</td>
-        <td>M+</td>
-        <td class="ce">CE</td>
-        <td class="clear">ON/C</td>
-      </tr>
 
-      <tr>
-        <td class="number">7</td>
-        <td class="number">8</td>
-        <td class="number">9</td>
-        <td class="plus-minus">+/-</td>
-        <td class="sqrt">√</td>
-      </tr>
-
-      <tr>
-        <td class="number">4</td>
-        <td class="number">5</td>
-        <td class="number">6</td>
-        <td class="number">*</td>
-        <td class="number">/</td>
-      </tr>
-
-      <tr>
-        <td class="number">1</td>
-        <td class="number">2</td>
-        <td class="number">3</td>
-        <td rowspan="2" class="number">+</td>
-        <td class="number">-</td>
-      </tr>
-
-      <tr>
-        <td class="number">0</td>
-        <td class="number">.</td>
-        <td class="percentages">%</td>
-        <td class="equal">=</td>
-      </tr>
-    </table>
-  </div>
-
-
-
-  <script src=script.js></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
