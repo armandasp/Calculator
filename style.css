@@ -7,7 +7,7 @@ body {
   border: 2px solid black;
   border-radius: 5px;
   display: inline-block;
-  background: red;
+  background: rgb(51, 51, 51);
 }
 .screen {
   height: 50px;
